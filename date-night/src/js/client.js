@@ -263,6 +263,7 @@ dateMate.chooseLocation = function(){
         }
       }
       $("#fruit-modal").fadeIn(400);
+      $("#plot").fadeIn(400);
       dateMate.fruitless = false;
     };
 
@@ -312,7 +313,7 @@ dateMate.chooseLocation = function(){
       }
       $("#venues-ul").hide();
       $("#venues-ul").fadeIn(200);
-      $("#plot").fadeIn(200);
+      $("#randomise").fadeIn(400);
     };
 
 
