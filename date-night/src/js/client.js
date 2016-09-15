@@ -658,7 +658,8 @@ dateMate.chooseLocation = function(){
                           maxWidth: 250
                         });
                         this.infowindow.open(this.map, marker);
-
+                        this.map.setCenter(marker.getPosition());
+                        this.map.panBy(0,-50);
                       }else {
                         this.infowindow = new google.maps.InfoWindow({
                           content: `<div class="infobox">
