@@ -64,6 +64,7 @@ dateMate.resetThePage = function(){
   this.colTwoUnfixed = false;
   this.colThreeUnfixed = false;
   this.markers        = [];
+  this.latLngArray    = [];
   this.clearChoices();
   this.chosenLocation = undefined;
   $("#venues-ul").fadeOut(400);
