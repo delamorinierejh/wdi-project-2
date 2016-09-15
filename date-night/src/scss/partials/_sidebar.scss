@@ -4,7 +4,7 @@
   width: 20%;
   left: -206px;
   background: linear-gradient( to top, rgba(89,96,129,0.2), rgba(13,12,50,1));
-  z-index: 10;
+  z-index: 22;
   position: absolute;
   transition: all 0.5s ease;
   &.expanded{
@@ -59,7 +59,7 @@
       font-size: 14px;
     }
     h2 {
-      margin: 10px 0;
+      margin: 10px 5px;
       text-align: center;
       font-size: 12px;
       &.side-venue-name{

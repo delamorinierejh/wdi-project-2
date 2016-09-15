@@ -17,6 +17,9 @@ dateMate.init = function(){
   this.latLngArray    = [];
   this.sideBarOut     = false;
   this.infoForVenues = '';
+  $(".stageOne").hide();
+  $(".stageTwo").hide();
+  $(".stageThree").hide();
   $("#selection-modal").on("click", ".options-buttons", this.optionClicked);
   $("body").on("click", "#proceed", this.chooseLocation.bind(this));
   $("body").on("click", "#randomise", this.randomise.bind(this));
@@ -83,6 +86,7 @@ dateMate.resetThePage = function(){
   $("#proceed").hide();
   $("#proceedTwo").hide();
   $("#randomise").text("Keep looking");
+  $(".stageOne").fadeIn(200);
 };
 
 dateMate.optionClicked = function(){
@@ -185,6 +189,8 @@ dateMate.clearChoices = function(){
 };
 
 dateMate.chooseLocation = function(){
+  $(".stageOne").hide();
+  $(".stageTwo").show();
   dateMate.getCurrentLocation();
   $("#proceed").fadeOut(400);
   $("#selection-modal").fadeOut(400);
@@ -220,6 +226,8 @@ dateMate.chooseLocation = function(){
   };
 
   dateMate.showFruitModal = function(){
+    $(".stageThree").show();
+    $(".stageTwo").hide();
     $("#proceedTwo").hide();
     $("#proceedTwo").off("click", dateMate.showFruitModal);
     $("#location-modal").fadeOut(400);
@@ -318,8 +326,6 @@ dateMate.chooseLocation = function(){
             <h2>${dateMate.choice1}</h2>
             <h2 class="venue-name" id="venue-one-name">${data.restaurant.name}</h2>
             <div class="img-div" ><img src="${data.restaurant.image}"id="venue-one-img"></img></div>
-
-            <p class="venue-blurb" id="venue-one-blurb">${data.restaurant.cuisine}</p>
             <img class="lock" id="lockone" src="../images/lock-icon.png"></img>
             `);
           } else if (dateMate.choice1 === "Drinks"){
@@ -342,7 +348,6 @@ dateMate.chooseLocation = function(){
                 <h2>${dateMate.choice2}</h2>
                 <h2 class="venue-name" id="venue-two-name">${data.restaurant.name}</h2>
                 <div class="img-div" ><img src="${data.restaurant.image}"id="venue-two-img"></img></div>
-                <p class="venue-blurb" id="venue-one-blurb">${data.restaurant.cuisine}</p>
                 <img class="lock" id="locktwo" src="../images/lock-icon.png"></img>
                 `);
               } else if (dateMate.choice2 === "Drinks"){
@@ -365,7 +370,6 @@ dateMate.chooseLocation = function(){
                     <h2>${dateMate.choice3}</h2>
                     <h2 class="venue-name" id="venue-three-name">${data.restaurant.name}</h2>
                     <div class="img-div" ><img src="${data.restaurant.image}"id="venue-three-img"></img></div>
-                    <p class="venue-blurb" id="venue-three-blurb">${data.restaurant.cuisine}</p>
                     <img class="lock" id="lockthree" src="../images/lock-icon.png"></img>
                     `);
                   } else if (dateMate.choice3 === "Drinks"){
@@ -413,6 +417,7 @@ dateMate.chooseLocation = function(){
                 };
 
                 dateMate.plotIt = function(){
+                  $(".stageThree").hide();
                   dateMate.getInfoForSideBar();
                   $("#fruit-modal").fadeOut(400);
                   $("#plot").fadeOut(400);
@@ -647,10 +652,8 @@ dateMate.chooseLocation = function(){
                         this.infowindow = new google.maps.InfoWindow({
                           content: `<div class="infobox">
                           <div class="iw-title"><h3>${venue.restaurant.name}</h3></div>
-                          <div class="image-content">
-                          <img src="${venue.restaurant.image}"></br>
-                          </div>
-                          <div class="iw-bottom-gradient"></div>
+                          <div class="info-box-address">
+                          <p>${venue.restaurant.address}</p>
                           </div>`,
                           maxWidth: 250
                         });
@@ -660,14 +663,14 @@ dateMate.chooseLocation = function(){
                         this.infowindow = new google.maps.InfoWindow({
                           content: `<div class="infobox">
                           <div class="iw-title"><h3>${venue.bar.name}</h3></div>
-                          <div class="image-content">
-                          <img src="${venue.bar.image}"></br>
-                          </div>
-                          <div class="iw-bottom-gradient"></div>
+                          <div class="info-box-address">
+                          <p>${venue.bar.address}</p>
                           </div>`,
                           maxWidth: 250
                         });
                         this.infowindow.open(this.map, marker);
+                        this.map.setCenter(marker.getPosition());
+                        this.map.panBy(0,-50);
                       }
                     });
                   };

@@ -1,95 +1,95 @@
-
-
-#location-modal {
-  // display: none;
-  padding: 10px;
-  font-size: 14px;
-  position: fixed;
-  z-index: 14;
-  top: 18%;
-  left: 50%;
-  text-align: center;
-  min-height: 290px;
-  width: 600px;
-  background:  $modal-background;
-  border-radius: 8px;
-  border: 1px solid black;
-  box-shadow: 3px 3px rgba(0,0,0,0.8);
-  margin-left: -318px;
-  margin-bottom: 20px;
-  h1 {
-    font-family: 'Josefin Sans', sans-serif;
-    margin-top: 5px;
-    font-size: 40px;
-    font-weight: 700;
-    padding: 4px;
+.stageTwo{
+  display: none;
+  position: relative;
+  border: 2px solid black;
+  min-height: 536px;
+  min-width: 640px;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  position: absolute;
+  z-index: 8;
+  #location-modal {
+    // display: none;
+    margin: 120px auto 0 auto;
+    padding: 10px;
+    font-size: 14px;
     text-align: center;
-    text-shadow: 2px 2px rgba(0,0,0,0.8);
-    color: #f5f5f4;
-  }
-  ul {
-    text-align: center;
-    display: inline-block;
-    margin-top: 30px;
-    li {
-      float: left;
-      // margin: 0 10px;
-      height: 30px;
-      font-size: 20px;
-      line-height: 30px;
-      width: 165px;
-      padding: 2px;
-      margin: 0 12px;
-      color: #f5f5f4;
-      border-radius: 8px;
-      font-family: 'Roboto', cursive;
-      border: 3px ridge #29162d;
-      background: #58537D;
-      text-shadow: 2px 2px rgba(0,0,0,0.7);
-      &:hover {
-        background: #532e5a;
-        cursor: pointer;
-      }
-      &.selected{
-        background: #254b64;
-      }
-    }
-  }
-}
-
-#proceedTwo {
-  font-family: 'Josefin Sans', sans-serif;
-  z-index: 14;
-  padding: 6px;
-  text-align: center;
-  color: #f5f5f5;
-  font-size: 30px;
-  position: fixed;
-  width: 340px;
-  bottom: 115px;
-  text-shadow: 2px 2px #3b3d3d;
-  left: 50%;
-  margin-left: -180px;
-  margin-top: 20px;
-  background-color: rgba(13,8,47,0);
-  border-radius: 8px;
-  button {
-    padding: 8px;
-    padding-top: 11px;
-    font-family: 'Josefin Sans', sans-serif;
-    width: 340px;
-    font-size: 32px;
-    text-shadow: 2px 2px rgba(0,0,0,0.8);
+    min-height: 290px;
+    width: 600px;
+    background:  $modal-background;
     border-radius: 8px;
     border: 1px solid black;
-    color: #f5f5f5;
-    background-color: #1D174A;
-    &:focus{
-      outline: none;
+    box-shadow: 3px 3px rgba(0,0,0,0.8);
+    h1 {
+      font-family: 'Josefin Sans', sans-serif;
+      margin-top: 5px;
+      font-size: 40px;
+      font-weight: 700;
+      padding: 4px;
+      text-align: center;
+      text-shadow: 2px 2px rgba(0,0,0,0.8);
+      color: #f5f5f4;
     }
-    &:hover{
-      background-color: #3a295a;
-      cursor: pointer;
+    ul {
+      text-align: center;
+      display: inline-block;
+      margin-top: 30px;
+      li {
+        float: left;
+        // margin: 0 10px;
+        height: 30px;
+        font-size: 20px;
+        line-height: 30px;
+        width: 165px;
+        padding: 2px;
+        margin: 0 12px;
+        color: #f5f5f4;
+        border-radius: 8px;
+        font-family: 'Roboto', cursive;
+        border: 3px ridge #29162d;
+        background: #58537D;
+        text-shadow: 2px 2px rgba(0,0,0,0.7);
+        &:hover {
+          background: #532e5a;
+          cursor: pointer;
+        }
+        &.selected{
+          background: #254b64;
+        }
+      }
+    }
+  }
+  #proceedTwo {
+    font-family: 'Josefin Sans', sans-serif;
+    padding: 6px;
+    text-align: center;
+    color: #f5f5f5;
+    font-size: 30px;
+    width: 340px;
+    bottom: 115px;
+    text-shadow: 2px 2px #3b3d3d;
+    margin: 20px auto 0 auto;
+    background-color: rgba(13,8,47,0);
+    border-radius: 8px;
+    button {
+      padding: 8px;
+      padding-top: 11px;
+      font-family: 'Josefin Sans', sans-serif;
+      width: 340px;
+      font-size: 32px;
+      text-shadow: 2px 2px rgba(0,0,0,0.8);
+      border-radius: 8px;
+      border: 1px solid black;
+      color: #f5f5f5;
+      background-color: #1D174A;
+      &:focus{
+        outline: none;
+      }
+      &:hover{
+        background-color: #3a295a;
+        cursor: pointer;
+      }
     }
   }
 }
