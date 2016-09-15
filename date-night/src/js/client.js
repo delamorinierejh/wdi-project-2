@@ -77,7 +77,6 @@ dateMate.resetThePage = function(){
   $(".stageTwo").hide();
   $(".stageThree").hide();
   // this.toggleSlide();
-  $(".sidebar").fadeOut("200").removeClass("expanded");
   $("#fruit-modal").hide();
   $("#location-modal").hide();
   $("#selection-modal").hide();
@@ -87,6 +86,9 @@ dateMate.resetThePage = function(){
   $("#proceedTwo").hide();
   $("#randomise").text("Keep looking");
   $(".stageOne").fadeIn(200);
+  $(".sidebar").fadeOut("200").removeClass("expanded");
+  this.sideBarOut = false;
+  $("#expand").attr("src", "/images/expand-right.png");
 };
 
 dateMate.optionClicked = function(){
@@ -189,7 +191,7 @@ dateMate.clearChoices = function(){
 };
 
 dateMate.chooseLocation = function(){
-  $(".stageOne").hide();
+  $(".stageOne").fadeOut(400);
   $(".stageTwo").show();
   dateMate.getCurrentLocation();
   $("#proceed").fadeOut(400);
@@ -227,7 +229,7 @@ dateMate.chooseLocation = function(){
 
   dateMate.showFruitModal = function(){
     $(".stageThree").show();
-    $(".stageTwo").hide();
+    $(".stageTwo").fadeOut(400);
     $("#proceedTwo").hide();
     $("#proceedTwo").off("click", dateMate.showFruitModal);
     $("#location-modal").fadeOut(400);
@@ -417,7 +419,7 @@ dateMate.chooseLocation = function(){
                 };
 
                 dateMate.plotIt = function(){
-                  $(".stageThree").hide();
+                  $(".stageThree").fadeOut(400);
                   dateMate.getInfoForSideBar();
                   $("#fruit-modal").fadeOut(400);
                   $("#plot").fadeOut(400);
