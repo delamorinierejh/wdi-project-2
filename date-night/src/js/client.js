@@ -118,7 +118,6 @@ dateMate.addDinnerChoice = function(){
       dateMate.numberOfVenues = 1;
       dateMate.choice1 = "Dinner";
     } else if ($("#cbTwo").attr("empty")){
-      console.log("yes");
       $("#cbTwo").css({"background-image" : "url('../images/dinner-button-large.jpg')", "border-style" : "solid"});
       $("#cbTwo").attr("choice", "dinner");
       $("#cbTwo").removeAttr("empty");
@@ -127,7 +126,6 @@ dateMate.addDinnerChoice = function(){
       dateMate.numberOfVenues = 2;
       dateMate.choice2 = "Dinner";
     } else if ($("#cbThree").attr("empty")){
-      console.log("yes2");
       $("#cbThree").css({"background-image" : "url('../images/dinner-button-large.jpg')", "border-style" : "solid"});
       $("#cbThree").attr("choice", "dinner");
       $("#cbThree").removeAttr("empty");
@@ -151,7 +149,6 @@ dateMate.addDrinksChoice = function(){
     dateMate.numberOfVenues = 1;
     dateMate.choice1 = "Drinks";
   } else if ($("#cbTwo").attr("empty")){
-    console.log("yes");
     $("#cbTwo").css({"background-image" : "url('../images/drinks-button-large.jpg')", "border-style" : "solid"});
     $("#cbTwo").attr("choice", "drinks");
     $("#cbTwo").removeAttr("empty");
@@ -160,7 +157,6 @@ dateMate.addDrinksChoice = function(){
     dateMate.numberOfVenues = 2;
     dateMate.choice2 = "Drinks";
   } else if ($("#cbThree").attr("empty")){
-    console.log("yes2");
     $("#cbThree").css({"background-image" : "url('../images/drinks-button-large.jpg')", "border-style" : "solid"});
     $("#cbThree").attr("choice", "drinks");
     $("#cbThree").removeAttr("empty");
@@ -321,7 +317,6 @@ dateMate.chooseLocation = function(){
 
 
     dateMate.updateColumn1 = function(data){
-      console.log(data);
       if (dateMate.colOneUnfixed){
         dateMate.firstStop = data;
         if (dateMate.choice1 === "Dinner"){
@@ -339,7 +334,6 @@ dateMate.chooseLocation = function(){
               <img class="lock" id="lockone" src="../images/lock-icon.png"></img>
               `);
             }
-            console.log(data);
           }
         };
 
@@ -361,7 +355,6 @@ dateMate.chooseLocation = function(){
                   <img class="lock" id="locktwo" src="../images/lock-icon.png"></img>
                   `);
                 }
-                console.log(data);
               }
             };
 
@@ -383,7 +376,6 @@ dateMate.chooseLocation = function(){
                       <img class="lock" id="lockthree" src="../images/lock-icon.png"></img>
                       `);
                     }
-                    console.log(data);
                   }
                 };
 
@@ -614,7 +606,6 @@ dateMate.chooseLocation = function(){
                   };
 
                   dateMate.showRoute = function(value){
-                    // console.log("yup");
                     let directionsObject = {
                       origin: dateMate.latLngArray[0],
                       waypoints: [],
@@ -635,14 +626,11 @@ dateMate.chooseLocation = function(){
                         stopover: true
                       });
                     }
-                    // console.log(directionsObject);
                     let dateRoute = new google.maps.DirectionsService();
                     let routeDisplayer = new google.maps.DirectionsRenderer({suppressMarkers: true});
                     routeDisplayer.setMap(dateMate.map);
                     dateRoute.route(directionsObject, function(result, status) {
-                      console.log(status);
                       if (status == 'OK') {
-                        console.log(result);
                         routeDisplayer.setDirections(result);
                       }
                     });
@@ -807,7 +795,6 @@ dateMate.chooseLocation = function(){
                               })
                               .done(callback)
                               .fail(data => {
-                                console.log(data);
                                 dateMate.$formarea.find(".form-control").css({"border": "2px solid #c84242", "outline": "none"});
                               });
                             };
