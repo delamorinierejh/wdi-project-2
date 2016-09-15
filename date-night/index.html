@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Date Mate London</title>
+  <link rel="icon" href="/images/martini-logo.png">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBphLbK93sy8IgL45yezMHtj-49OdYogjs" charset="utf-8"></script>
+  <script src="/js/app.js" charset="utf-8"></script>
+</head>
+<body>
+
+    <header>
+    </header>
+
+<div class="login-stage">
+  <h1 id="title" >Date Mate London</h1>
+  <div id="login-modal" >
+
+  </div>
+</div>
+
+
+<div class="stageOne">
+  <div id="selection-modal" hidden=true>
+
+  </div>
+  <div id="proceed" hidden=true>
+    <ul>
+      <li><button type="button" id="proceed-button">Where to?</button></li>
+    </ul>
+  </div>
+</div>
+
+<div class="stageTwo">
+  <div id="location-modal" hidden=true>
+
+  </div>
+  <div id="proceedTwo" hidden=true>
+    <ul>
+      <li><button type="button" id="proceed-button-two">Choose your venues</button></li>
+    </ul>
+  </div>
+</div>
+
+<div class="stage-three">
+  <div id="fruit-modal">
+
+  </div>
+  <div id="plot">
+    <ul class="plot-buttons">
+      <li><button type="button" class="final-buttons" id="randomise">Keep looking</button></li>
+    </ul>
+  </div>
+</div>
+
+
+
+        <div class="sidebar">
+          <img id="expand" src="images/expand-right.png" alt="right"/>
+          <h1 id="sidecar-header">Details</h1>
+          <div class="venue-details">
+
+          </div>
+        </div>
+
+    <main>
+      <div id="map-canvas">
+      </div>
+    </main>
+
+
+</body>
+</html>

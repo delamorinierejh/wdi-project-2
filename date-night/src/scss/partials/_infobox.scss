@@ -1,0 +1,18 @@
+.infobox{
+  .iw-title{
+    text-align: center;
+    font-size: 14px;
+    font-family: "Josefin Sans", sans-serif;
+  }
+  .image-content{
+    height: 120px;
+    width: 200px;
+    overflow: hidden;
+    margin-bottom: 3px;
+    text-align: center;
+    img {
+      text-align: center;
+
+    }
+  }
+}

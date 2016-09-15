@@ -1,0 +1,137 @@
+
+#fruit-modal {
+  display: none;
+  padding: 10px;
+  font-size: 14px;
+  position: fixed;
+  z-index: 14;
+  top: 18%;
+  left: 50%;
+  text-align: center;
+  /*bottom: 50%;
+  right: 50%;*/
+  /*text-align: center;*/
+  height: 380px;
+  width: 1000px;
+  background:  $modal-background;
+  border: 1px solid black;
+  border-radius: 8px;
+  box-shadow: 3px 3px rgba(0,0,0,0.8);
+  margin-left: -518px;
+  h1 {
+    font-family: 'Josefin Sans', sans-serif;
+    margin-top: 5px;
+    font-size: 40px;
+    font-weight: 700;
+    padding: 4px;
+    text-align: center;
+    text-shadow: 2px 2px rgba(0,0,0,0.8);
+    color: #f5f5f4;
+  }
+  ul {
+    text-align: center;
+    margin-top: 10px;
+    li {
+      color: #f5f5f5;
+      display: inline-block;
+      height: 300px;
+      width: 450px;
+      &.style-2{
+        width: 365px;
+        margin: 0 5px;
+      }
+      &.style-3{
+        width: 325px;
+      }
+      h2{
+        margin-top: 6px;
+        font-size: 14px;
+        text-shadow: 1px 1px rgba(0,0,0,0.7);
+        &.venue-name{
+          height: 40px;
+          font-size: 20px;
+          margin: 5px;
+        }
+      }
+      .img-div {
+        height: 200px;
+        width: 100%;
+        overflow: hidden;
+        border-radius: 8px;
+      }
+      .venue-blurb {
+        font-size: 14px;
+        text-shadow: 1px 1px black;
+        z-index:15;
+        position: absolute;
+        max-width: 255px;
+        text-align: left;
+        bottom: 80px;
+        margin-left: 12px;
+        padding:3px;
+        background-color: rgba(0,0,0,0.5);
+      }
+      .lock{
+        height: 30px;
+        text-align: center;
+        opacity: 0.6;
+        margin-top: 10px;
+        &:hover{
+          cursor: pointer;
+          opacity: 0.8;
+        }
+        &.selected {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+#plot {
+    display: none;
+    z-index: 18;
+    font-family: 'Josefin Sans', sans-serif;
+    position: absolute;
+    bottom: 60px;
+    width: inherit;
+    // padding: 6px;
+    // color: #f5f5f5;
+    // font-size: 30px;
+    // position: fixed;
+    // bottom: 60px;
+    // text-shadow: 2px 2px #3b3d3d;
+    // left: 50%;
+    // background-color: rgba(13,8,47,0);
+    // border-radius: 8px;
+    // margin-top: 20px;
+    ul {
+      width: inherit;
+      text-align: center;
+      display: block;
+    }
+    li {
+      display: inline-block;
+      margin: 0 30px;
+      button {
+        padding: 8px;
+        padding-top: 11px;
+        font-family: 'Josefin Sans', sans-serif;
+        width: 320px;
+        font-size: 30px;
+        border-radius: 8px;
+        border: 1px solid black;
+        color: #f5f5f5;
+        background-color: #1D174A;
+        text-shadow: 2px 2px rgba(0,0,0,0.8);
+        &:focus{
+          outline: none;
+        }
+        &:hover{
+          background-color: #3a295a;
+          cursor: pointer;
+        }
+      }
+
+    }
+  }

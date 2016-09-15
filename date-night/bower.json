@@ -1,0 +1,20 @@
+{
+  "name": "date-night",
+  "description": "",
+  "main": "ajax.js",
+  "authors": [
+    "delamorinierejh <delamorinierejh@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/delamorinierejh/wdi-project-2",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "https://github.com/jquery/jquery.git#^3.1.0"
+  }
+}
