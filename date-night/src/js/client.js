@@ -70,6 +70,9 @@ dateMate.resetThePage = function(){
   this.thirdStop = undefined;
   this.infoForVenues = '';
   $(".venue-details").empty();
+  $(".stageOne").hide();
+  $(".stageTwo").hide();
+  $(".stageThree").hide();
   // this.toggleSlide();
   $(".sidebar").fadeOut("200").removeClass("expanded");
   $("#fruit-modal").hide();
@@ -781,6 +784,8 @@ dateMate.chooseLocation = function(){
                                 <li class="options-buttons" id="clear"></li>
                                 </ul>
                                 `);
+                                $(".stageOne").show();
+                                $(".loginStage").hide();
                                 dateMate.$selectionModal.fadeIn(400);
                               });
                             };
