@@ -786,7 +786,6 @@ dateMate.chooseLocation = function(){
                               });
                             };
 
-
                             dateMate.ajaxRequest = function(url, method, data, callback){
                               return $.ajax({
                                 url,
