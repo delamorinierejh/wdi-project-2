@@ -5,7 +5,7 @@ mongoose.Promise = bluebird;
 const Restaurant = require("../models/restaurant");
 const config     = require('../config/config');
 
-mongoose.connect(config.db);
+mongoose.connect(config.db.production);
 
 Restaurant.collection.drop();
 

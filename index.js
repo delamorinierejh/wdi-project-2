@@ -5,11 +5,12 @@ const mongoose   = require("mongoose");
 const expressJWT = require('express-jwt');
 
 const app        = express();
+const environment = app.get("env");
 const config     = require("./config/config");
 const apiRouter  = require("./config/apiRoutes");
 const webRouter  = require("./config/webRoutes");
 
-mongoose.connect(config.db);
+mongoose.connect(config.db.production);
 
 app.use(morgan("dev"));
 app.use(express.static(`${__dirname}/public`));
@@ -34,3 +35,5 @@ app.use("/", webRouter);
 app.use("/api", apiRouter);
 
 app.listen(config.port, () => console.log(`Express started on port: ${config.port}`));
+
+module.exports    = app;

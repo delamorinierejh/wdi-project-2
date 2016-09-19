@@ -5,7 +5,7 @@ mongoose.Promise = bluebird;
 const Bar        = require("../models/bar");
 const config     = require('../config/config');
 
-mongoose.connect(config.db);
+mongoose.connect(config.db.production);
 
 Bar.collection.drop();
 
