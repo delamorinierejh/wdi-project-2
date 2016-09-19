@@ -322,14 +322,14 @@ dateMate.chooseLocation = function(){
         dateMate.firstStop = data;
         if (dateMate.choice1 === "Dinner"){
           $("#venue-one").html(`
-            <h2>${dateMate.choice1}</h2>
+            <h2>Stop 1: ${dateMate.choice1}</h2>
             <h2 class="venue-name" id="venue-one-name">${data.restaurant.name}</h2>
             <div class="img-div" ><img src="${data.restaurant.image}"id="venue-one-img"></img></div>
             <img class="lock" id="lockone" src="../images/lock-icon.png"></img>
             `);
           } else if (dateMate.choice1 === "Drinks"){
             $("#venue-one").html(`
-              <h2>${dateMate.choice1}</h2>
+              <h2>Stop 1: ${dateMate.choice1}</h2>
               <h2 class="venue-name" id="venue-one-name">${data.bar.name}</h2>
               <div class="img-div" ><img src="${data.bar.image}"id="venue-one-img"></img></div>
               <img class="lock" id="lockone" src="../images/lock-icon.png"></img>
@@ -343,14 +343,14 @@ dateMate.chooseLocation = function(){
             dateMate.secondStop = data;
             if (dateMate.choice2 === "Dinner"){
               $("#venue-two").html(`
-                <h2>${dateMate.choice2}</h2>
+                <h2>Stop 2: ${dateMate.choice2}</h2>
                 <h2 class="venue-name" id="venue-two-name">${data.restaurant.name}</h2>
                 <div class="img-div" ><img src="${data.restaurant.image}"id="venue-two-img"></img></div>
                 <img class="lock" id="locktwo" src="../images/lock-icon.png"></img>
                 `);
               } else if (dateMate.choice2 === "Drinks"){
                 $("#venue-two").html(`
-                  <h2>${dateMate.choice2}</h2>
+                  <h2>Stop 2: ${dateMate.choice2}</h2>
                   <h2 class="venue-name" id="venue-two-name">${data.bar.name}</h2>
                   <div class="img-div" ><img src="${data.bar.image}"id="venue-two-img"></img></div>
                   <img class="lock" id="locktwo" src="../images/lock-icon.png"></img>
@@ -364,14 +364,14 @@ dateMate.chooseLocation = function(){
                 dateMate.thirdStop = data;
                 if (dateMate.choice3 === "Dinner"){
                   $("#venue-three").html(`
-                    <h2>${dateMate.choice3}</h2>
+                    <h2>Stop 3: ${dateMate.choice3}</h2>
                     <h2 class="venue-name" id="venue-three-name">${data.restaurant.name}</h2>
                     <div class="img-div" ><img src="${data.restaurant.image}"id="venue-three-img"></img></div>
                     <img class="lock" id="lockthree" src="../images/lock-icon.png"></img>
                     `);
                   } else if (dateMate.choice3 === "Drinks"){
                     $("#venue-three").html(`
-                      <h2>${dateMate.choice3}</h2>
+                      <h2>Stop 3: Nightcap</h2>
                       <h2 class="venue-name" id="venue-three-name">${data.bar.name}</h2>
                       <div class="img-div" ><img src="${data.bar.image}"id="venue-three-img"></img></div>
                       <img class="lock" id="lockthree" src="../images/lock-icon.png"></img>

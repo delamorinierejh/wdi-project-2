@@ -94,7 +94,7 @@ function getRestaurants(location, start){
           newDataTwo.website = data.result.website || '';
         }
         if (data.result.opening_hours){
-        newDataTwo.openingHours = data.result.opening_hours.weekday_text || [];
+          newDataTwo.openingHours = data.result.opening_hours.weekday_text || [];
         }
         // }
         // if(data.result){console.log(data.result.website);}
