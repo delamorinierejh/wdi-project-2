@@ -52,12 +52,17 @@ Once the user has selected an option, they click the 'Choose your venues', to go
 
 ![alt text](http://imgur.com/PUpDpBN.png "Choose your venues 3 options")
 
-The 
+With an agenda and a location chosen, the fun part of the app begins: choosing the venues. With this modal, the user is able to cycle through the various options available for different stops in the area that they have chosen for their date. As with a fruit machine, one the user has found an option they like, they can click the lock button to stop that column from randomising. 
 
-#####Plot the date
+#####Plot your date
 
 ![alt text](http://imgur.com/89k39EZ.png "Plot your date screen")
 
 ![alt text](http://imgur.com/eplM0JB.png "Plot your date screen sidebar hidden")
 
+Once the user is happy with all the options on screen - and has locked them all in - they can click the 'Plot your date' button to see their date on a map, complete with directions. The user can also open the scrolling sidebar which features key information about each of the venues as well as links to the website of the venue (where available) to make bookings etc.
+
+If at any point during the date planning process, the user want to run a new search, they can click the 'Date Mate London' home button in the top right hand corner of the screen to go back to the first step - 'Plan your date'.
+
+###Challenges
 
