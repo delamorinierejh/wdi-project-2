@@ -1,18 +1,63 @@
 #Date Mate London
-##An app to help plan dates in London
+###An app to help plan dates in London
 
 
+###Overview
+This application was produced as my second project for the Web Development Immersive course at General Assembly London. 
+
+The idea for the app came as a result of my inability to find a quick, fun and efficient way for finding new places to take my girlfriend for dates. I'd find myself writing a lot of different Google searches and reading lots of different articles trying to find a good spot.
+
+My initial aim was to build a practical was to browse all the best data in one simple and fun app. It also seemed a good idea to suggest that the venues all be grouped in similar areas so as to make travel between the different pitstops in the date as straightforward as possible - (Nobody wants to go for a cocktail in Hackney before dinner in Peckham)
+
+![alt text](http://imgur.com/uBn22Ac.png "Coolors")
+
+Whilst browsing the colour scheme planning website [**Coolors**](https://coolors.co/), it occured to me that it would be both fun and useful to have a fruit-machine style display that allowed visitors to quickly search through restaurants and bars that were grouped in the same area of London. As with the Coolors site, this modal would enable the user to randomly sift through the key spots in their chosen date area, with the added functionality of locking in suitable options.
+
+This idea would form the basis for the app as it looks today, which also has other features such as driving directions form the user's current location to the various stops on the date, as well as a side bar that provides key information about the venues such as website, ratings and average cost.
+
+###Planning
+WIREFRAMING
+API SET UP
+
+
+###How to use the app
+
+#####Login / Register
 ![alt text](http://imgur.com/do1EV8H.png "Date Mate London Homepage")
+Upon pageload - the user is asked to login or register. This step is built on JWT authentication. Once the user has logged in or registered, they are assigned a unique session token which allows them to make the API requests necessary for the application to work.
 
+
+#####Plan your date
 ![alt text](http://imgur.com/cDrmFjm.png "Plan your date screen 1")
 
 ![alt text](http://imgur.com/ANMLngV.png "Plan your date screen 2")
+Once logged into the ap, the user is presented with the first modal inviting them to 'Plan their date'. This involves choosing an agenda for the date - namely, which pitstops should be made and in what order. Up to three options can be chosen, but dinner can only be chosen once. The user can click the clear button to clear the board and start selecting the agenda from the beginning.
+
+
+#####Choose location
+
+![alt text](http://imgur.com/ho8AWuW.png "Choose your location")
+
+Having chosen an agenda for the night, the user is then asked to pick one of 9 locations in London to go out in. I decided to restrict the number of locations that the user can pick from for two reasons:
+
+* I was only using a public Google Places API key and therefore wanted to restrict the breadth of results being brought into my API
+* The data for some non-central areas of London was more likely to be less in keeping with the aesthetic and feel of the app, making for an inferior user-experience
+
+Once the user has selected an option, they click the 'Choose your venues', to go the fruit-machine/venue-picking modal.
+
+
+#####Choose venues
 
 ![alt text](http://imgur.com/PC525N4.png "Choose your venues")
 
-![alt text](http://imgur.com/N0KCDNX.png "Plot your date screen")
+![alt text](http://imgur.com/PUpDpBN.png "Choose your venues 3 options")
 
-This application was produced as my second project for the Web Development Immersive course at General Assembly London
+The 
 
-###How to use the app
-Date Mate London 
+#####Plot the date
+
+![alt text](http://imgur.com/89k39EZ.png "Plot your date screen")
+
+![alt text](http://imgur.com/eplM0JB.png "Plot your date screen sidebar hidden")
+
+

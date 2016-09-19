@@ -628,7 +628,12 @@ dateMate.chooseLocation = function(){
                       });
                     }
                     let dateRoute = new google.maps.DirectionsService();
-                    let routeDisplayer = new google.maps.DirectionsRenderer({suppressMarkers: true});
+                    let routeDisplayer = new google.maps.DirectionsRenderer({
+                      suppressMarkers: true,
+                      polylineOptions: {
+                      strokeColor: "orange"
+                      }
+                  });
                     routeDisplayer.setMap(dateMate.map);
                     dateRoute.route(directionsObject, function(result, status) {
                       if (status == 'OK') {
