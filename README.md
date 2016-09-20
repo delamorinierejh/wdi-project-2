@@ -1,8 +1,8 @@
 #Date Mate London
-###An app to help plan dates in London
+####An app to help plan dates in London
 
 
-###Overview
+##Overview
 This application was produced as my second project for the Web Development Immersive course at General Assembly London. 
 
 The idea for the app came as a result of my inability to find a quick, fun and efficient way for finding new places to take my girlfriend for dates. I'd find myself writing a lot of different Google searches and reading lots of different articles trying to find a good spot.
@@ -15,12 +15,28 @@ Whilst browsing the colour scheme planning website [**Coolors**](https://coolors
 
 This idea would form the basis for the app as it looks today, which also has other features such as driving directions form the user's current location to the various stops on the date, as well as a side bar that provides key information about the venues such as website, ratings and average cost.
 
-###Planning
-WIREFRAMING
-API SET UP
+##Planning
+* WIREFRAMING
+![alt text](http://imgur.com/KZ7p7qi.png "Wireframe 1")
+![alt text](http://imgur.com/aPnE2N9.png "Wireframe 2")
+![alt text](http://imgur.com/wIl2Duw.png "Wireframe 3")
+
+* API SET UP
+
+##Technnology used
+* HTML5
+* SCSS
+* jQuery
+* Node.js
+* Express.js
+* Gulp
+* Bower
+* GoogleMaps API
+* Google Places API
+* Zomato API
 
 
-###How to use the app
+##How to use the app
 
 #####Login / Register
 ![alt text](http://imgur.com/do1EV8H.png "Date Mate London Homepage")
@@ -64,5 +80,5 @@ Once the user is happy with all the options on screen - and has locked them all 
 
 If at any point during the date planning process, the user want to run a new search, they can click the 'Date Mate London' home button in the top right hand corner of the screen to go back to the first step - 'Plan your date'.
 
-###Challenges
+##Challenges
 
