@@ -15,27 +15,6 @@ Whilst browsing the colour scheme planning website [**Coolors**](https://coolors
 
 This idea would form the basis for the app as it looks today, which also has other features such as driving directions form the user's current location to the various stops on the date, as well as a side bar that provides key information about the venues such as website, ratings and average cost.
 
-##Planning
-* WIREFRAMING
-![alt text](http://imgur.com/KZ7p7qi.png "Wireframe 1")
-![alt text](http://imgur.com/aPnE2N9.png "Wireframe 2")
-![alt text](http://imgur.com/wIl2Duw.png "Wireframe 3")
-
-* API SET UP
-
-##Technnology used
-* HTML5
-* SCSS
-* jQuery
-* Node.js
-* Express.js
-* Gulp
-* Bower
-* GoogleMaps API
-* Google Places API
-* Zomato API
-
-
 ##How to use the app
 
 #####Login / Register
@@ -80,5 +59,34 @@ Once the user is happy with all the options on screen - and has locked them all 
 
 If at any point during the date planning process, the user want to run a new search, they can click the 'Date Mate London' home button in the top right hand corner of the screen to go back to the first step - 'Plan your date'.
 
-##Challenges
+##Planning
+####Wireframing
+I used the tool Balsamiq to wireframe the general appearance of the main parts of the app - namely the set up process and the map itself (complete with sidebar).
+
+#####Plan your date
+![alt text](http://imgur.com/KZ7p7qi.png "Wireframe 1")
+#####Choose your venues
+![alt text](http://imgur.com/aPnE2N9.png "Wireframe 2")
+#####Plot your date
+![alt text](http://imgur.com/wIl2Duw.png "Wireframe 3")
+
+####API
+I researched which APIs would best suit the app and quickly came to the conclusion that for restaurants Zomato had the best data. It was more of a struggle to find solid data for bars, with the result that there was going to be a signifcant gap in the amount of data aviable for restaurants and bars. Ultimately I decided to use both the Zomato and Google PLaces API and came to the decision that it would be best to serve data to the site to come from my own API. This would allow me to have more uniform data between my bars and restaurants, ultimately making the code in the front end more legible and neat.
+
+I therefore wrote 2 seeds files - one for restaurants and one for bars. In order to make use of the useful data available acoss both the Zomato and Google Places APIs (as well as the various types of query available from both sources). Using request promise, I set up functions that would make three API requests in total. For restaurants, I first queried the Zomato API for inital properties, before updating objects with further information from two Google Places searches (a search by the name of the restaurant and then a place details search using the placeId from the previous search). A simialr search was used for bars, but rather than initially querying Zomato, I merely ran a keyword search in the Google Places API (i.e. [name of area]+cocktails+london)
+
+Ultimately I was happy with the amount of data coming in, though with mroe time, I would certainly like to improve the approach for collecting data on bars.
+
+
+##Technnology used
+* HTML5
+* SCSS
+* jQuery
+* Node.js
+* Express.js
+* Gulp
+* Bower
+* GoogleMaps API
+* Google Places API
+* Zomato API
 
