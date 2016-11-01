@@ -31,7 +31,7 @@ dateMate.init = function(){
   $("body").on("click", "#home-button", this.resetThePage.bind(this));
   $("header").on("click", "#logout", this.refresh);
   $(".sidebar").on("click", "#expand", this.toggleSlide);
-  this.apiUrl = "http://localhost:3000/api";
+  this.apiUrl = "https://date-mate-london.herokuapp.com/api";
   $("body").on("submit", "form", this.handleForm);
   this.$loginmodal  = $("#login-modal");
   this.setUpLogin.bind(this)();
