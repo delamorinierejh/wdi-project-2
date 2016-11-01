@@ -3,7 +3,6 @@ const morgan     = require("morgan");
 const bodyParser = require("body-parser");
 const mongoose   = require("mongoose");
 const expressJWT = require('express-jwt');
-const environment = app.get("env");
 const app        = express();
 const environment = app.get("env");
 const config     = require("./config/config");
