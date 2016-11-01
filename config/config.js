@@ -3,7 +3,7 @@ module.exports = {
   db:   {
     test: "mongodb://localhost/date-night-test",
     development: "mongodb://localhost/date-night-development",
-    production: process.env.MONGOLAB_URI || "mongodb://localhost/date-night"
+    production: process.env.MONGODB_URI || "mongodb://localhost/date-night"
   },
   secret: process.env.SECRET || "Hush hush hush",
   gmKey: process.env.GOOGLE_MAPS_KEY || "mapskey",
