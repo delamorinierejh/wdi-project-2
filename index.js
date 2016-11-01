@@ -9,7 +9,7 @@ const config     = require("./config/config");
 const apiRouter  = require("./config/apiRoutes");
 const webRouter  = require("./config/webRoutes");
 
-mongoose.connect(config.db[environment]);
+mongoose.connect(process.env.MONGOLAB_URI || "mongodb://localhost/date-night");
 
 app.use(morgan("dev"));
 app.use(express.static(`${__dirname}/public`));
@@ -33,6 +33,6 @@ function jwtErrorHandler(err, req, res, next){
 app.use("/", webRouter);
 app.use("/api", apiRouter);
 
-app.listen(config.port, () => console.log(`Express started on port: ${config.port}`));
+app.listen(process.env.PORT || 3000, () => console.log(`Express started on port: ${config.port}`));
 
 module.exports    = app;
