@@ -318,6 +318,7 @@ dateMate.chooseLocation = function(){
 
 
     dateMate.updateColumn1 = function(data){
+      console.log(data);
       if (dateMate.colOneUnfixed){
         dateMate.firstStop = data;
         if (dateMate.choice1 === "Dinner"){

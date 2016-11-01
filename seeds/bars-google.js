@@ -84,4 +84,4 @@ function getBars(location){
 }
 
 // getBars(areas[2]);
-// searchAreasForBars(areas);
+searchAreasForBars(areas);

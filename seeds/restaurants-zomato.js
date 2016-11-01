@@ -107,4 +107,4 @@ function getRestaurants(location, start){
 }
 
 // getRestaurants(areas[0], 0);
-// searchAreasForRestaurants(areas);
+searchAreasForRestaurants(areas);
