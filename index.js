@@ -4,12 +4,12 @@ const bodyParser = require("body-parser");
 const mongoose   = require("mongoose");
 const expressJWT = require('express-jwt');
 const app        = express();
-// const environment = app.get("env");
+const environment = app.get("env");
 const config     = require("./config/config");
 const apiRouter  = require("./config/apiRoutes");
 const webRouter  = require("./config/webRoutes");
 
-mongoose.connect(config.db.production);
+mongoose.connect(config.db[environment]);
 
 app.use(morgan("dev"));
 app.use(express.static(`${__dirname}/public`));
