@@ -5,7 +5,7 @@ mongoose.Promise = bluebird;
 const Bar        = require("../models/bar");
 const config     = require('../config/config');
 
-mongoose.connect(config.db.production);
+mongoose.connect("mongodb://heroku_s1dthv4d:83sggu2jd98vbf8g4rvo40o7dc@ds033036.mlab.com:33036/heroku_s1dthv4d");
 
 Bar.collection.drop();
 
