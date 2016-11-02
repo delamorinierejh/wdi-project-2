@@ -272,13 +272,13 @@ dateMate.getDataForFruitMachine = function(option, number){
     if (option === "Dinner"){
       $.ajax({
         method: 'GET',
-        url: `http://localhost:3000/api/restaurants/${dateMate.chosenLocation}`,
+        url: `https://date-mate-london.herokuapp.com//api/restaurants/${dateMate.chosenLocation}`,
         beforeSend: dateMate.setRequestHeader.bind(dateMate)
       }).done(dateMate.updateColumn1);
     } else if (option === "Drinks"){
       $.ajax({
         method: 'GET',
-        url: `http://localhost:3000/api/bars/${dateMate.chosenLocation}`,
+        url: `https://date-mate-london.herokuapp.com//api/bars/${dateMate.chosenLocation}`,
         beforeSend: dateMate.setRequestHeader.bind(dateMate)
       }).done(dateMate.updateColumn1);
     }
@@ -286,13 +286,13 @@ dateMate.getDataForFruitMachine = function(option, number){
     if (option === "Dinner"){
       $.ajax({
         method: 'GET',
-        url: `http://localhost:3000/api/restaurants/${dateMate.chosenLocation}`,
+        url: `https://date-mate-london.herokuapp.com//api/restaurants/${dateMate.chosenLocation}`,
         beforeSend: dateMate.setRequestHeader.bind(dateMate)
       }).done(dateMate.updateColumn2);
     } else if (option === "Drinks"){
       $.ajax({
         method: 'GET',
-        url: `http://localhost:3000/api/bars/${dateMate.chosenLocation}`,
+        url: `https://date-mate-london.herokuapp.com//api/bars/${dateMate.chosenLocation}`,
         beforeSend: dateMate.setRequestHeader.bind(dateMate)
       }).done(dateMate.updateColumn2);
     }
@@ -300,13 +300,13 @@ dateMate.getDataForFruitMachine = function(option, number){
     if (option === "Dinner"){
       $.ajax({
         method: 'GET',
-        url: `http://localhost:3000/api/restaurants/${dateMate.chosenLocation}`,
+        url: `https://date-mate-london.herokuapp.com//api/restaurants/${dateMate.chosenLocation}`,
         beforeSend: dateMate.setRequestHeader.bind(dateMate)
       }).done(dateMate.updateColumn3);
     } else if (option === "Drinks"){
       $.ajax({
         method: 'GET',
-        url: `http://localhost:3000/api/bars/${dateMate.chosenLocation}`,
+        url: `https://date-mate-london.herokuapp.com//api/bars/${dateMate.chosenLocation}`,
         beforeSend: dateMate.setRequestHeader.bind(dateMate)
       }).done(dateMate.updateColumn3);
     }
