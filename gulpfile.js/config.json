@@ -1,0 +1,44 @@
+{
+  "srcDir": "src/",
+  "destDir": "public/",
+  "src": {
+    "js": "src/js/",
+    "scss": "src/scss/",
+    "fonts": "src/fonts/",
+    "images": "src/images/",
+    "partials": "src/js/views/"
+  },
+  "dest": {
+    "js": "public/js/",
+    "css": "public/css/",
+    "fonts": "public/fonts/",
+    "images": "public/images/",
+    "partials": "public/js/views/"
+  },
+  "main": {
+    "js": "app.js",
+    "index": "index.html",
+    "scss": "style.scss",
+    "server": "index.js",
+    "gulpfile": "gulpfile.js",
+    "packageJson": "package.json"
+  },
+  "vendor": {
+    "js": "vendor.js",
+    "css": "vendor.css"
+  },
+  "output": {
+    "js": "app.js",
+    "css": "style.css"
+  },
+  "selectors": {
+    "all": "*",
+    "js": "**/*.js",
+    "css": "**/*.css",
+    "scss": "**/*.scss",
+    "html": "**/*.html",
+    "images": "**/*.{png,jpg,jpeg,gif,ico}",
+    "partials": "**/*.html",
+    "fonts": "**/*.{eot,svg,ttf,woff,woff2}"
+  }
+}

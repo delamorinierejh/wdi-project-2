@@ -1,9 +1,9 @@
 module.exports = {
-  home:  staticsHome,
+  home: staticsHome
 };
 
-const path = require("path");
+const path = require('path');
 
 function staticsHome(req,res) {
-  return res.sendFile(path.join(__dirname, "../index.html"));
+  return res.sendFile(path.join(__dirname, '../index.html'));
 }

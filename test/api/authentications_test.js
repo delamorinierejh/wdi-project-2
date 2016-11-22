@@ -1,10 +1,10 @@
-require("../spec_helper");
+require('../spec_helper');
 
 const User = require('../../models/user');
 
 User.collection.drop();
 
-describe("Auth tests", function() {
+describe('Auth tests', function() {
 
   // this.timeout(5000);
 
@@ -13,53 +13,53 @@ describe("Auth tests", function() {
     done();
   });
 
-  describe("POST /api/register with good credentials", () => {
+  describe('POST /api/register with good credentials', () => {
 
-    it("should return a token", done => {
+    it('should return a token', done => {
       api.post('/api/register')
-        .set("Accept", "application/json")
+        .set('Accept', 'application/json')
         .send({
           user: {
-            username: "test",
-            email: "test@test.com",
-            password: "password",
-            passwordConfirmation: "password"
+            username: 'test',
+            email: 'test@test.com',
+            password: 'password',
+            passwordConfirmation: 'password'
           }
         }).end((err, res) => {
-          console.log("HELLO!", res.body);
+          console.log('HELLO!', res.body);
           expect(res.body.token).to.be.a('string');
           done();
         });
     });
   });
 
-  describe("POST /api/register with bad credentials", () => {
-    it("should return a 500 response", done => {
+  describe('POST /api/register with bad credentials', () => {
+    it('should return a 500 response', done => {
       api.post('/api/register')
-        .set("Accept", "application/json")
+        .set('Accept', 'application/json')
         .send({
-          username: "test",
-          email: "test@test.com",
+          username: 'test',
+          email: 'test@test.com'
         }).expect(500, done);
     });
   });
 
-  describe("POST /api/login with good credentials", done => {
+  describe('POST /api/login with good credentials', done => {
 
-    it("should return a token", done => {
+    it('should return a token', done => {
       const user = new User({
-        username: "test",
-        email: "test@test.com",
-        password: "password",
-        passwordConfirmation: "password"
+        username: 'test',
+        email: 'test@test.com',
+        password: 'password',
+        passwordConfirmation: 'password'
       });
 
       user.save((err, user) => {
         api.post('/api/login')
-          .set("Accept", "application/json")
+          .set('Accept', 'application/json')
           .send({
-            email: "test@test.com",
-            password: "password"
+            email: 'test@test.com',
+            password: 'password'
           }).end((err, res) => {
             expect(res.body.token).to.be.a('string');
             done();
@@ -68,23 +68,23 @@ describe("Auth tests", function() {
     });
   });
 
-  describe("POST /api/login with bad credentials", done => {
+  describe('POST /api/login with bad credentials', done => {
 
-    it("should return a 401 response", done => {
+    it('should return a 401 response', done => {
       const user = new User({
-        username: "test",
-        email: "test@test.com",
-        password: "password",
-        passwordConfirmation: "password"
+        username: 'test',
+        email: 'test@test.com',
+        password: 'password',
+        passwordConfirmation: 'password'
       });
 
       user.save((err, user) => {
-        console.log("HERE", err);
+        console.log('HERE', err);
         api.post('/api/login')
-          .set("Accept", "application/json")
+          .set('Accept', 'application/json')
           .send({
-            email: "test@test.com",
-            password: "pass"
+            email: 'test@test.com',
+            password: 'pass'
           }).expect(401, done);
       });
     });

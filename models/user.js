@@ -3,8 +3,8 @@ const bcrypt    = require('bcrypt');
 const validator = require('validator');
 
 const userSchema = new mongoose.Schema({
-  username    : {type: String, unique: true, required: true},
-  email       : {type: String, unique: true, required: true},
+  username: {type: String, unique: true, required: true},
+  email: {type: String, unique: true, required: true},
   passwordHash: {type: String, required: true}
 });
 
@@ -24,9 +24,9 @@ userSchema
   .path('email')
   .validate(validateEmail);
 
-  userSchema.methods.validatePassword = validatePassword;
+userSchema.methods.validatePassword = validatePassword;
 
-  userSchema.set("toJSON", {
+userSchema.set('toJSON', {
   transform: function(doc, ret) {
     delete ret.passwordHash;
     delete ret.email;
@@ -35,7 +35,7 @@ userSchema
   }
 });
 
-module.exports = mongoose.model("User", userSchema);
+module.exports = mongoose.model('User', userSchema);
 
 function setPassword(value){
   this._password    = value;
@@ -49,7 +49,7 @@ function setPasswordConfirmation(value){
 function validatePasswordHash(){
   if (this.isNew) {
     if (!this._password) {
-      return this.invalidate("password", "A password is required.");
+      return this.invalidate('password', 'A password is required.');
     }
 
     if (this._password.length < 6) {
@@ -57,15 +57,15 @@ function validatePasswordHash(){
     }
 
     if (this._password !== this._passwordConfirmation) {
-      return this.invalidate("passwordConfirmation", "Passwords do not match.");
+      return this.invalidate('passwordConfirmation', 'Passwords do not match.');
     }
   }
 }
 
 function validateEmail(value){
   if (!validator.isEmail(value)) {
-      return this.invalidate('email', 'must be a valid email address');
-    }
+    return this.invalidate('email', 'must be a valid email address');
+  }
 }
 
 function validatePassword(value){
